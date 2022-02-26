@@ -21,13 +21,18 @@ syntax on
 set number
 " highlight matching braces
 set showmatch
+" show match as search proceeds
+set incsearch
 
 " intelligent comments
 set comments=sl:/*,mb:\ *,elx:\ */
 set formatoptions+=r
 
-"ctags
-"set ctags to check home directory for .tags file
+" ctags
+" set ctags to check home directory for .tags file
 set tags=./.tags;$HOME
-"add command 'Ctags' to generate .ctags file in home directory
-:command Ctags ! find . -name *.[ch] | ctags -R -f .tags -L -
+" add command 'Ctags' to generate .ctags file in home directory
+:command Ctags ! cd; find . -name '*.[ch]' | ctags -R -f .tags -L -
+" add command 'Ctagsall' to generate .ctags file in home directory
+" for all files and the system (used for library definitions)
+:command Ctagsall ! cd; find / -name '*.[ch]' | ctags -R -f .tags -L -
