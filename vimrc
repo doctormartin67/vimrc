@@ -28,6 +28,9 @@ set incsearch
 set comments=sl:/*,mb:\ *,elx:\ */
 set formatoptions+=r
 
+" path for find
+set path+=**;$HOME/Coding
+
 " ctags
 " set ctags to check home directory for .tags file
 set tags=./.tags;$HOME
