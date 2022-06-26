@@ -39,3 +39,6 @@ set tags=./.tags;$HOME
 " add command 'Ctagsall' to generate .ctags file in home directory
 " for all files and the system (used for library definitions)
 :command Ctagsall ! cd; find / -name '*.[ch]' | ctags -R -f .tags -L -
+
+"caching
+let g:ctrlp_use_caching = 1
