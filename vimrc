@@ -29,16 +29,10 @@ set comments=sl:/*,mb:\ *,elx:\ */
 set formatoptions+=r
 
 " path for find
-set path+=**;$HOME/Coding
+set path+=**;$HOME/gameboy_emulator
 
-" ctags
-" set ctags to check home directory for .tags file
-set tags=./.tags;$HOME
-" add command 'Ctags' to generate .ctags file in home directory
-:command Ctags ! cd; find . -name '*.[ch]' | ctags -R -f .tags -L -
-" add command 'Ctagsall' to generate .ctags file in home directory
-" for all files and the system (used for library definitions)
-:command Ctagsall ! cd; find / -name '*.[ch]' | ctags -R -f .tags -L -
-
-"caching
+" caching
 let g:ctrlp_use_caching = 1
+
+" pathogen
+execute pathogen#infect()
