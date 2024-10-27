@@ -20,7 +20,7 @@ set expandtab
 " wrap lines at 80 chars.
 set textwidth=80
 
-colorscheme peachpuff
+colorscheme desert
 
 "not sure if I need this option or not: (removed for now)
 "set t_Co=256
